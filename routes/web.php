@@ -1,8 +1,15 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\CompanyJobController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\JobCandidateController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+use Spatie\Permission\Contracts\Role;
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,6 +30,26 @@ Route::middleware('auth')->group(function () {
         Route::get('my-applications', [DashboardController::class, 'my_applications'])->name('my.applications');
         Route::get('my-applications/{job_candidate}', [DashboardController::class, 'my_application_details'])->name('my.applications.details');
         });
+    });
+
+    Route::prefix('admin')->name('admin.')->group(function () {
+        Route::middleware('can:manage categories')->group(function () {
+            Route::resource('categories', CategoryController::class);
+        });
+
+        Route::middleware('can:manage company')->group(function () {
+            Route::resource('company', CompanyController::class);
+        });
+
+        Route::middleware('can:manage jobs')->group(function () {
+            Route::resource('company_jobs', CompanyJobController::class);
+        });
+
+        Route::middleware('can:manage applicants')->group(function () {
+            Route::resource('job_candidates', JobCandidateController::class);
+            Route::get('/candidate/{job_candidate}/resume/download', [JobCandidateController::class, 'download_file'])->name('download_resume');
+        });
+
     });
 });
 

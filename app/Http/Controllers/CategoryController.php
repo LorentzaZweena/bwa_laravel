@@ -12,7 +12,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        // return 'hello cate';
+        $category = Category::orderByDesc('id')->paginate(10);
+        return view('super_admin.categories.index', compact('categories'));
     }
 
     /**
@@ -59,6 +61,11 @@ class CategoryController extends Controller
      * Remove the specified resource from storage.
      */
     public function destroy(Category $category)
+    {
+        //
+    }
+
+    public function download_file()
     {
         //
     }
