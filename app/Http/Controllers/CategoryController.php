@@ -14,7 +14,7 @@ class CategoryController extends Controller
     {
         // return 'hello cate';
         $category = Category::orderByDesc('id')->paginate(10);
-        return view('super_admin.categories.index', compact('categories'));
+        return view('super_admin.categories.index', compact('category'));
     }
 
     /**
@@ -22,7 +22,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('super_admin.categories.create');
     }
 
     /**

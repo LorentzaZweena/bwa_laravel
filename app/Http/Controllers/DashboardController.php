@@ -12,7 +12,7 @@ class DashboardController extends Controller
     public function my_applications(){
         $user = Auth::user();
         $my_company = JobCandidate::where('candidate_id', $user->id)->orderByDesc('id')->paginate(10);
-        return view('dashboard.my_applications', compact('my_applications'));
+        return view('dashboard.my_applications', compact('my_company'));
     }
 
     public function my_application_details(JobCandidate $jobCandidate){

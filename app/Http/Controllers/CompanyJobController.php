@@ -16,7 +16,7 @@ class CompanyJobController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $my_company = Company::where(['employer_id', $user->id])->first();
+        $my_company = Company::where('employer_id', $user->id)->first();
         if($my_company){
             $company_jobs = CompanyJob::with(['category'])->where('company_id', $my_company->id)->paginate(10);
         } else {
