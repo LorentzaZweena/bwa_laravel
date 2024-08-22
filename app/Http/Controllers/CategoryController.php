@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreCategoryRequest;
 use App\Models\Category;
-use Illuminate\Container\Attributes\DB;
+// use Illuminate\Container\Attributes\DB;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
@@ -34,8 +36,16 @@ class CategoryController extends Controller
     {
         DB::transaction(function() use ($request) {
             $validated = $request->validated();
-            
+            if($request->hasFile('icon')){
+                $iconPath = $request->file('icon')->store('icons/' . date('Y/d/m'), 'public');
+                $validated['icon'] = $iconPath;
+            }
+
+            $validated['slug'] = Str::slug($validated['name']);
+            $newData = Category::create($validated);
         });
+
+        return redirect()->route('admin.categories.index');
     }
 
     /**
