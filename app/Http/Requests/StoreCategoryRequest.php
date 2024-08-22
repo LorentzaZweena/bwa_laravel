@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Category;
 use Illuminate\Foundation\Http\FormRequest;
+// use App\Models\User;
 
 class StoreCategoryRequest extends FormRequest
 {
@@ -22,8 +24,8 @@ class StoreCategoryRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required', 'string', 'max:255'],
-            'icon' => ['required', 'image', 'mimes:png, jpg, jpeg'],
+            'name' => ['required', 'string', 'max:255', 'unique:'.Category::class],
+            'icon' => ['required', 'image', 'mimes:png'],
         ];
     }
 }

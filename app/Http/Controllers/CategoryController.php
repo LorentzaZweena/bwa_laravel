@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreCategoryRequest;
+use App\Http\Requests\UpdateCategoryRequest;
 use App\Models\Category;
 // use Illuminate\Container\Attributes\DB;
 use Illuminate\Support\Facades\DB;
@@ -61,15 +62,26 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        //
+        return view('super_admin.categories.edit', compact('category'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Category $category)
+    public function update(UpdateCategoryRequest $request, Category $category)
     {
-        //
+        DB::transaction(function() use ($request, $category) {
+            $validated = $request->validated();
+            if($request->hasFile('icon')){
+                $iconPath = $request->file('icon')->store('icons/' . date('Y/d/m'), 'public');
+                $validated['icon'] = $iconPath;
+            }
+
+            $validated['slug'] = Str::slug($validated['name']);
+            $category->update($validated);
+        });
+
+        return redirect()->route('admin.categories.index');
     }
 
     /**
@@ -77,7 +89,11 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        DB::transaction(function() use ($category) {
+            $category->delete();
+        });
+
+        return redirect()->route('admin.categories.index');
     }
 
     public function download_file()
