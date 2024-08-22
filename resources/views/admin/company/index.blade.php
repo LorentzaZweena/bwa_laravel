@@ -20,12 +20,12 @@
                                 {{ $company->name }}
                             </h3>
                         <p class="text-slate-500 text-sm">
-                            {{ $company->jobs->count() }}
+                            {{ $company->jobs->count() }} jobs posted
                         </p>
                         </div>
                     </div>   
                     <div class="hidden md:flex flex-row items-center gap-x-3">
-                        <a href="{{ route('admin.categories.edit', $company) }}" class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
+                        <a href="{{ route('admin.company.edit', $company) }}" class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
                             Edit Company
                         </a>
                     </div>

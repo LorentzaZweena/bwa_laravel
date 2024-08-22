@@ -53,11 +53,9 @@ class RegisteredUserController extends Controller
         ]);
 
         if($request->account_type == 'Employee'){
-            $user->assignRole('employee');
+            $user->assignRole('Employee');
         } else if($request->account_type == 'Employer'){
-            $user->assignRole('employer');
-        } else{
-            $user->assignRole('employee');
+            $user->assignRole('Employer');
         }
 
         event(new Registered($user));
