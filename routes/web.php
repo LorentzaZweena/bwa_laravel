@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\CompanyJobController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FrontController;
 use App\Http\Controllers\JobCandidateController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Category;
@@ -11,9 +12,7 @@ use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use Spatie\Permission\Contracts\Role;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [FrontController::class, 'index'])->name('front.index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -51,7 +50,7 @@ Route::middleware('auth')->group(function () {
         });
 
     });
-    Route::resource('company_jobs', CompanyJobController::class);
+    // Route::resource('company_jobs', CompanyJobController::class);
 
 });
 
