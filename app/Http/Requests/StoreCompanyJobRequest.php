@@ -31,7 +31,7 @@ class StoreCompanyJobRequest extends FormRequest
             'type' => ['required', 'string', 'max:255'],
             'thumbnail' => ['required', 'image', 'mimes:png, jpg, jpeg'],
             'responsibilities.*' => ['required|string|max:255'],
-            'qualification.*' => ['required|string|max:255'],
+            'qualifications.*' => ['required|string|max:255'],
             'about' => ['required', 'string', 'max:65535'],
         ];
     }

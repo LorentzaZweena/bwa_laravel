@@ -51,6 +51,8 @@ Route::middleware('auth')->group(function () {
         });
 
     });
+    Route::resource('company_jobs', CompanyJobController::class);
+
 });
 
 require __DIR__.'/auth.php';

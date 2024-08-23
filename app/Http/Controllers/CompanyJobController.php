@@ -38,7 +38,7 @@ class CompanyJobController extends Controller
         $my_company = Company::where('employer_id', $user->id)->first();
         if(!$my_company){
             return redirect()->route('admin.company.create');
-        } 
+    } 
         $categories = Category::all();
         return view('admin.company_jobs.create', compact('categories', 'my_company'));
     }
@@ -84,7 +84,7 @@ class CompanyJobController extends Controller
      */
     public function show(CompanyJob $companyJob)
     {
-        //
+        return view('admin.company_jobs.show', compact('companyJob'));
     }
 
     /**

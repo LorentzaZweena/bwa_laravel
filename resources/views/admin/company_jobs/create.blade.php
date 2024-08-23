@@ -62,6 +62,8 @@
                             @foreach ($categories as $category)
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach
+                                <option value=""></option>
+                            
 
                         </select>
 
@@ -86,7 +88,7 @@
                         
                         <div class="flex flex-col gap-y-5">
                             <x-input-label for="responsibilities" :value="__('responsibilities')" />
-                            @for($i = 0; $i < 4; $i++)
+                            @for ($i = 0; $i < 4; $i++)
                                 <input type="text" class="py-3 rounded-lg border-slate-300 border" placeholder="Write your responsibilities" name="responsibilities[]">
                             @endfor
                         </div>
@@ -99,9 +101,9 @@
                         
                         <div class="flex flex-col gap-y-5">
                             <x-input-label for="qualifications" :value="__('qualifications')" />
-                        @for($i = 0; $i < 4; $i++)
+                            @for ($i = 0; $i < 4; $i++)
                                 <input type="text" class="py-3 rounded-lg border-slate-300 border" placeholder="Write your qualifications" name="qualifications[]">
-                        @endfor
+                            @endfor
                         </div>
                         <x-input-error :messages="$errors->get('qualifications')" class="mt-2" />
                     </div>
