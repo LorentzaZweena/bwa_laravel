@@ -48,94 +48,62 @@
         </div>
         <div id="Title" class="flex flex-col mt-[90px] gap-[10px]">
             <h1 class="font-bold text-[32px] leading-[48px]">{{ $companyJob->name }}</h1>
-            <p>{{ $companyJob->category->name }} • Posted at</p>
+            <p>{{ $companyJob->category->name }} • Posted at {{ $companyJob->created_at->format('D m, Y') }}</p>
         </div>
         <div id="Feature" class="flex items-center gap-6">
             <div class="flex items-center gap-[6px]">
                 <div class="flex shrink-0 w-[38px] h-[38px]">
                     <img src="{{asset('assets/icons/note-favorite-orange.svg')}}" alt="icon">
                 </div>
-                <p class="font-semibold text-lg leading-[27px]">Full-Time</p>
+                <p class="font-semibold text-lg leading-[27px]">{{ $companyJob->type }}</p>
             </div>
             <div class="flex items-center gap-[6px]">
                 <div class="flex shrink-0 w-[38px] h-[38px]">
                     <img src="{{asset('assets/icons/personalcard-yellow.svg')}}" alt="icon">
                 </div>
-                <p class="font-semibold text-lg leading-[27px]">Intermediate</p>
+                <p class="font-semibold text-lg leading-[27px]">{{ $companyJob->skill_level }}</p>
             </div>
             <div class="flex items-center gap-[6px]">
                 <div class="flex shrink-0 w-[38px] h-[38px]">
                     <img src="{{asset('assets/icons/moneys-cyan.svg')}}" alt="icon">
                 </div>
-                <p class="font-semibold text-lg leading-[27px]">Rp 18.500.000/mo</p>
+                <p class="font-semibold text-lg leading-[27px]">Rp {{ number_format($companyJob->salary, 0, ',' , '.') }} /mo</p>
             </div>
             <div class="flex items-center gap-[6px]">
                 <div class="flex shrink-0 w-[38px] h-[38px]">
                     <img src="{{asset('assets/icons/location-purple.svg')}}" alt="icon">
                 </div>
-                <p class="font-semibold text-lg leading-[27px]">Bali, Indonesia</p>
+                <p class="font-semibold text-lg leading-[27px]">{{ $companyJob->location }}</p>
             </div>
         </div>
         <div id="Overview" class="flex flex-col gap-[10px]">
             <h2 class="font-semibold text-xl leading-[30px]">Overview</h2>
-            <p class="text-lg leading-[34px]">We are seeking a talented and passionate Front-End Developer to join our dynamic team the ideal candidate will have a keen eye for design, a deep understanding of modern web technologies, and a passion for creating engaging user experiences a Front-End Developer, you will work closely with our design and back-end teams to build responsive, user-friendly.</p>
+            <p class="text-lg leading-[34px]">{{ $companyJob->about }}</p>
         </div>
         <div id="Responsibilities" class="flex flex-col gap-[10px]">
             <h2 class="font-semibold text-xl leading-[30px]">Responsibilities</h2>
             <div class="flex flex-col gap-5">
+
+            @foreach ($companyJob->responsibilities as $responsibility)
                 <div class="flex items-center gap-2">
                     <div class="flex shrink-0">
                         <img src="{{asset('assets/icons/tick-circle.svg')}}" alt="tick icon">
                     </div>
-                    <p>Lorem dolor quick interview ipsum amet never nego</p>
-                </div>
-                <div class="flex items-center gap-2">
-                    <div class="flex shrink-0">
-                        <img src="{{asset('assets/icons/tick-circle.svg')}}" alt="tick icon">
-                    </div>
-                    <p>Powerful AI filtering job based on resume to create stunning</p>
-                </div>
-                <div class="flex items-center gap-2">
-                    <div class="flex shrink-0">
-                        <img src="{{asset('assets/icons/tick-circle.svg')}}" alt="tick icon">
-                    </div>
-                    <p>Lorem dolor quick interview ipsum amet never nego</p>
-                </div>
-                <div class="flex items-center gap-2">
-                    <div class="flex shrink-0">
-                        <img src="{{asset('assets/icons/tick-circle.svg')}}" alt="tick icon">
-                    </div>
-                    <p>Powerful AI filtering job based on resume to create stunning</p>
-                </div>
+                    <p>{{ $responsibility }}</p>
+                @endforeach
             </div>
         </div>
         <div id="Qualifications" class="flex flex-col gap-[10px]">
             <h2 class="font-semibold text-xl leading-[30px]">Qualifications</h2>
             <div class="flex flex-col gap-5">
+
+            @foreach ($companyJob->qualifications as $qualification)
                 <div class="flex items-center gap-2">
                     <div class="flex shrink-0">
                         <img src="{{asset('assets/icons/tick-circle.svg')}}" alt="tick icon">
                     </div>
-                    <p>Lorem dolor quick interview ipsum amet never nego</p>
-                </div>
-                <div class="flex items-center gap-2">
-                    <div class="flex shrink-0">
-                        <img src="{{asset('assets/icons/tick-circle.svg')}}" alt="tick icon">
-                    </div>
-                    <p>Powerful AI filtering job based on resume to create stunning</p>
-                </div>
-                <div class="flex items-center gap-2">
-                    <div class="flex shrink-0">
-                        <img src="{{asset('assets/icons/tick-circle.svg')}}" alt="tick icon">
-                    </div>
-                    <p>Lorem dolor quick interview ipsum amet never nego</p>
-                </div>
-                <div class="flex items-center gap-2">
-                    <div class="flex shrink-0">
-                        <img src="{{asset('assets/icons/tick-circle.svg')}}" alt="tick icon">
-                    </div>
-                    <p>Powerful AI filtering job based on resume to create stunning</p>
-                </div>
+                    <p>{{ $qualification }}</p>
+            @endforeach
             </div>
         </div>
         <div id="Company" class="flex flex-col gap-[10px]">

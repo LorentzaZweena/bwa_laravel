@@ -263,7 +263,7 @@
                             <p class="font-bold text-lg leading-[27px]">Rp 18.500.000</p>
                             <p class="text-sm leading-[21px]">/month</p>
                         </div>
-                        <a href="details.html" class="rounded-full p-[14px_24px] bg-[#FF6B2C] font-semibold text-white hover:shadow-[0_10px_20px_0_#FF6B2C66] transition-all duration-300">Details</a>
+                        <a href="{{ front.details }}" class="rounded-full p-[14px_24px] bg-[#FF6B2C] font-semibold text-white hover:shadow-[0_10px_20px_0_#FF6B2C66] transition-all duration-300">Details</a>
                     </div>
                 </div>
             </div>
