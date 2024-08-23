@@ -83,7 +83,7 @@
                         </h3>
                         <ul class="flex flex-col gap-y-3">
 
-                                @foreach ($companyJob->qualifications as $qualifications)
+                                @foreach ($companyJob->qualifications as $qualification)
                                 
                                 <li class="text-slate-500 text-base">{{ $qualification->name }}</li>
                                 @endforeach
