@@ -83,27 +83,21 @@
         <div id="Responsibilities" class="flex flex-col gap-[10px]">
             <h2 class="font-semibold text-xl leading-[30px]">Responsibilities</h2>
             <div class="flex flex-col gap-5">
-
-            @foreach ($companyJob->responsibilities as $responsibility)
                 <div class="flex items-center gap-2">
                     <div class="flex shrink-0">
                         <img src="{{asset('assets/icons/tick-circle.svg')}}" alt="tick icon">
                     </div>
-                    <p>{{ $responsibility }}</p>
-                @endforeach
+                    <p>{{ $companyJob->responsibilities }}</p>
             </div>
         </div>
         <div id="Qualifications" class="flex flex-col gap-[10px]">
             <h2 class="font-semibold text-xl leading-[30px]">Qualifications</h2>
             <div class="flex flex-col gap-5">
-
-            @foreach ($companyJob->qualifications as $qualification)
                 <div class="flex items-center gap-2">
                     <div class="flex shrink-0">
                         <img src="{{asset('assets/icons/tick-circle.svg')}}" alt="tick icon">
                     </div>
-                    <p>{{ $qualification }}</p>
-            @endforeach
+                    <p>{{ $companyJob->qualifications }}</p>
             </div>
         </div>
         <div id="Company" class="flex flex-col gap-[10px]">

@@ -2,11 +2,11 @@
 @section('content')
 <body class="font-poppins text-[#0E0140] pb-[100px] overflow-x-hidden">
     <div id="page-background" class="absolute h-[1330px] w-full top-0 -z-10 overflow-hidden">
-        <img src="assets/backgrounds/Group 2009.png')}}" class="w-full h-full object-fill" alt="background">
+        <img src="{{asset('assets/backgrounds/Group 2009.png')}}" class="w-full h-full object-fill" alt="background">
     </div>
     <nav class="container max-w-[1130px] mx-auto flex items-center justify-between pt-10">
         <a href="index.html" class="flex shrink-0">
-            <img src="assets/logos/Logo.svg')}}" alt="Logo">
+            <img src="{{asset('assets/logos/Logo.svg')}}" alt="Logo">
         </a>
         <ul class="flex items-center gap-10">
             <li>
@@ -34,7 +34,7 @@
         <div class="flex flex-col justify-center w-full gap-10">
             <div class="badge flex items-center rounded-full py-2 pl-4 pr-6 gap-[10px] bg-white w-fit">
                 <div class="flex shrink-0">
-                    <img src="assets/icons/crown-orange.svg')}}" alt="icon">
+                    <img src="{{asset('assets/icons/crown-orange.svg')}}" alt="icon">
                 </div>
                 <p class="font-semibold text-sm leading-[21px] text-[#0C0039]">Helped 5 Million People Worldwide Grow Career</p>
             </div>
@@ -45,7 +45,7 @@
             <form action="search.html" class="flex items-center bg-white rounded-full pl-6 h-fit focus-within:ring-2 focus-within:ring-[#FF6B2C] transition-all duration-300">
                 <div class="flex items-center w-full mr-6 gap-[10px]">
                     <div class="flex shrink-0">
-                        <img src="assets/icons/search-normal.svg')}}" alt="icon">
+                        <img src="{{asset('assets/icons/search-normal.svg')}}" alt="icon">
                     </div>
                     <input type="text" autocomplete="off" class="appearance-none w-full outline-none font-semibold placeholder:font-normal placeholder:text-[#0E0140] focus:outline-none" placeholder="Quick search your dream job...">
                 </div>
@@ -53,7 +53,7 @@
             </form>
         </div>
         <div class="flex shrink-0 w-[548px]">
-            <img src="assets/backgrounds/hero illustration v2.png')}}" class="object-contain" alt="banner">
+            <img src="{{asset('assets/backgrounds/hero illustration v2.png')}}" class="object-contain" alt="banner">
         </div>
     </header>
     <section id="Categories" class="container max-w-[1130px] mx-auto flex flex-col gap-[30px] mt-[70px]">
@@ -62,112 +62,112 @@
             <a href="" class="card">
                 <div class="flex flex-col rounded-[20px] border border-[#E8E4F8] p-5 gap-[30px] bg-white shadow-[0_8px_30px_0_#0E01400D] hover:ring-2 hover:ring-[#FF6B2C] transition-all duration-300">
                     <div class="w-[60px] h-[60px] flex shrink-0">
-                        <img src="assets/icons/Web Development 1-2.png')}}" class="object-contain" alt="icon">
+                        <img src="{{asset('assets/icons/Web Development 1-2.png')}}" class="object-contain" alt="icon">
                     </div>
                     <div class="flex items-center justify-between gap-4">
                         <div class="flex flex-col">
                             <p class="font-bold text-lg leading-[27px]">Product Design</p>
                             <p class="font-medium">182 Jobs</p>
                         </div>
-                        <img src="assets/icons/arrow-circle-right.svg')}}" alt="icon">
+                        <img src="{{asset('assets/icons/arrow-circle-right.svg')}}" alt="icon">
                     </div>
                 </div>
             </a>
             <a href="" class="card">
                 <div class="flex flex-col rounded-[20px] border border-[#E8E4F8] p-5 gap-[30px] bg-white shadow-[0_8px_30px_0_#0E01400D] hover:ring-2 hover:ring-[#FF6B2C] transition-all duration-300">
                     <div class="w-[60px] h-[60px] flex shrink-0">
-                        <img src="assets/icons/Web Development 1-1.png')}}" class="object-contain" alt="icon">
+                        <img src="{{asset('assets/icons/Web Development 1-1.png')}}" class="object-contain" alt="icon">
                     </div>
                     <div class="flex items-center justify-between gap-4">
                         <div class="flex flex-col">
                             <p class="font-bold text-lg leading-[27px]">Marketing</p>
                             <p class="font-medium">182 Jobs</p>
                         </div>
-                        <img src="assets/icons/arrow-circle-right.svg')}}" alt="icon">
+                        <img src="{{asset('assets/icons/arrow-circle-right.svg')}}" alt="icon">
                     </div>
                 </div>
             </a>
             <a href="" class="card">
                 <div class="flex flex-col rounded-[20px] border border-[#E8E4F8] p-5 gap-[30px] bg-white shadow-[0_8px_30px_0_#0E01400D] hover:ring-2 hover:ring-[#FF6B2C] transition-all duration-300">
                     <div class="w-[60px] h-[60px] flex shrink-0">
-                        <img src="assets/icons/Web Development 1.png')}}" class="object-contain" alt="icon">
+                        <img src="{{asset('assets/icons/Web Development 1.png')}}" class="object-contain" alt="icon">
                     </div>
                     <div class="flex items-center justify-between gap-4">
                         <div class="flex flex-col">
                             <p class="font-bold text-lg leading-[27px]">Development</p>
                             <p class="font-medium">182 Jobs</p>
                         </div>
-                        <img src="assets/icons/arrow-circle-right.svg')}}" alt="icon">
+                        <img src="{{asset('assets/icons/arrow-circle-right.svg')}}" alt="icon">
                     </div>
                 </div>
             </a>
             <a href="" class="card">
                 <div class="flex flex-col rounded-[20px] border border-[#E8E4F8] p-5 gap-[30px] bg-white shadow-[0_8px_30px_0_#0E01400D] hover:ring-2 hover:ring-[#FF6B2C] transition-all duration-300">
                     <div class="w-[60px] h-[60px] flex shrink-0">
-                        <img src="assets/icons/Web Development 1-4.png')}}" class="object-contain" alt="icon">
+                        <img src="{{asset('assets/icons/Web Development 1-4.png')}}" class="object-contain" alt="icon">
                     </div>
                     <div class="flex items-center justify-between gap-4">
                         <div class="flex flex-col">
                             <p class="font-bold text-lg leading-[27px]">Software QA</p>
                             <p class="font-medium">182 Jobs</p>
                         </div>
-                        <img src="assets/icons/arrow-circle-right.svg')}}" alt="icon">
+                        <img src="{{asset('assets/icons/arrow-circle-right.svg')}}" alt="icon">
                     </div>
                 </div>
             </a>
             <a href="" class="card">
                 <div class="flex flex-col rounded-[20px] border border-[#E8E4F8] p-5 gap-[30px] bg-white shadow-[0_8px_30px_0_#0E01400D] hover:ring-2 hover:ring-[#FF6B2C] transition-all duration-300">
                     <div class="w-[60px] h-[60px] flex shrink-0">
-                        <img src="assets/icons/Web Development 1-2.png')}}" class="object-contain" alt="icon">
+                        <img src="{{asset('assets/icons/Web Development 1-2.png')}}" class="object-contain" alt="icon">
                     </div>
                     <div class="flex items-center justify-between gap-4">
                         <div class="flex flex-col">
                             <p class="font-bold text-lg leading-[27px]">Copywriting</p>
                             <p class="font-medium">182 Jobs</p>
                         </div>
-                        <img src="assets/icons/arrow-circle-right.svg')}}" alt="icon">
+                        <img src="{{asset('assets/icons/arrow-circle-right.svg')}}" alt="icon">
                     </div>
                 </div>
             </a>
             <a href="" class="card">
                 <div class="flex flex-col rounded-[20px] border border-[#E8E4F8] p-5 gap-[30px] bg-white shadow-[0_8px_30px_0_#0E01400D] hover:ring-2 hover:ring-[#FF6B2C] transition-all duration-300">
                     <div class="w-[60px] h-[60px] flex shrink-0">
-                        <img src="assets/icons/Web Development 1-1.png')}}" class="object-contain" alt="icon">
+                        <img src="{{asset('assets/icons/Web Development 1-1.png')}}" class="object-contain" alt="icon">
                     </div>
                     <div class="flex items-center justify-between gap-4">
                         <div class="flex flex-col">
                             <p class="font-bold text-lg leading-[27px]">Blockchain</p>
                             <p class="font-medium">182 Jobs</p>
                         </div>
-                        <img src="assets/icons/arrow-circle-right.svg')}}" alt="icon">
+                        <img src="{{asset('assets/icons/arrow-circle-right.svg')}}" alt="icon">
                     </div>
                 </div>
             </a>
             <a href="" class="card">
                 <div class="flex flex-col rounded-[20px] border border-[#E8E4F8] p-5 gap-[30px] bg-white shadow-[0_8px_30px_0_#0E01400D] hover:ring-2 hover:ring-[#FF6B2C] transition-all duration-300">
                     <div class="w-[60px] h-[60px] flex shrink-0">
-                        <img src="assets/icons/Web Development 1.png')}}" class="object-contain" alt="icon">
+                        <img src="{{asset('assets/icons/Web Development 1.png')}}" class="object-contain" alt="icon">
                     </div>
                     <div class="flex items-center justify-between gap-4">
                         <div class="flex flex-col">
                             <p class="font-bold text-lg leading-[27px]">Virtual Assistant</p>
                             <p class="font-medium">182 Jobs</p>
                         </div>
-                        <img src="assets/icons/arrow-circle-right.svg')}}" alt="icon">
+                        <img src="{{asset('assets/icons/arrow-circle-right.svg')}}" alt="icon">
                     </div>
                 </div>
             </a>
             <a href="" class="card">
                 <div class="flex flex-col rounded-[20px] border border-[#E8E4F8] p-5 gap-[30px] bg-white shadow-[0_8px_30px_0_#0E01400D] hover:ring-2 hover:ring-[#FF6B2C] transition-all duration-300">
                     <div class="w-[60px] h-[60px] flex shrink-0">
-                        <img src="assets/icons/Web Development 1-4.png')}}" class="object-contain" alt="icon">
+                        <img src="{{asset('assets/icons/Web Development 1-4.png')}}" class="object-contain" alt="icon">
                     </div>
                     <div class="flex items-center justify-between gap-4">
                         <div class="flex flex-col">
                             <p class="font-bold text-lg leading-[27px]">Data Science</p>
                             <p class="font-medium">182 Jobs</p>
                         </div>
-                        <img src="assets/icons/arrow-circle-right.svg')}}" alt="icon">
+                        <img src="{{asset('assets/icons/arrow-circle-right.svg')}}" alt="icon">
                     </div>
                 </div>
             </a>
@@ -193,19 +193,19 @@
                     <div class="job-info flex flex-col gap-[14px]">
                         <div class="flex items-center gap-[6px]">
                             <div class="flex shrink-0 w-6 h-6">
-                                <img src="assets/icons/note-favorite-orange.svg')}}" alt="icon">
+                                <img src="{{asset('assets/icons/note-favorite-orange.svg')}}" alt="icon">
                             </div>
                             <p class="font-medium">{{ $job->type }}</p>
                         </div>
                         <div class="flex items-center gap-[6px]">
                             <div class="flex shrink-0 w-6 h-6">
-                                <img src="assets/icons/moneys-cyan.svg')}}" alt="icon">
+                                <img src="{{asset('assets/icons/moneys-cyan.svg')}}" alt="icon">
                             </div>
                             <p class="font-medium">Guaranteed</p>
                         </div>
                         <div class="flex items-center gap-[6px]">
                             <div class="flex shrink-0 w-6 h-6">
-                                <img src="assets/icons/location-purple.svg')}}" alt="icon">
+                                <img src="{{asset('assets/icons/location-purple.svg')}}" alt="icon">
                             </div>
                             <p class="font-medium">{{ $job->location }}</p>
                         </div>
@@ -216,7 +216,7 @@
                             <p class="font-bold text-lg leading-[27px]">Rp {{ number_format($job->salary, 0, ',' , '.') }}</p>
                             <p class="text-sm leading-[21px]">/month</p>
                         </div>
-                        <a href="{{ front.details }}" class="rounded-full p-[14px_24px] bg-[#FF6B2C] font-semibold text-white hover:shadow-[0_10px_20px_0_#FF6B2C66] transition-all duration-300">Details</a>
+                        <a href="{{ route('front.details', $job->slug) }}" class="rounded-full p-[14px_24px] bg-[#FF6B2C] font-semibold text-white hover:shadow-[0_10px_20px_0_#FF6B2C66] transition-all duration-300">Details</a>
                     </div>
                 </div>
             </div>
@@ -228,7 +228,7 @@
                 <div class="w-[300px] flex flex-col shrink-0 rounded-[20px] border border-[#E8E4F8] p-5 gap-5 bg-white shadow-[0_8px_30px_0_#0E01400D] hover:ring-2 hover:ring-[#FF6B2C] transition-all duration-300">
                     <div class="company-info flex items-center gap-3">
                         <div class="w-[70px] flex shrink-0 overflow-hidden">
-                            <img src="assets/logos/visa.svg')}}" class="object-contain w-full h-full" alt="logo">
+                            <img src="{{asset('assets/logos/visa.svg')}}" class="object-contain w-full h-full" alt="logo">
                         </div>
                         <div class="flex flex-col">
                             <p class="font-semibold">VISA Cabang</p>
@@ -240,19 +240,19 @@
                     <div class="job-info flex flex-col gap-[14px]">
                         <div class="flex items-center gap-[6px]">
                             <div class="flex shrink-0 w-6 h-6">
-                                <img src="assets/icons/note-favorite-orange.svg')}}" alt="icon">
+                                <img src="{{asset('assets/icons/note-favorite-orange.svg')}}" alt="icon">
                             </div>
                             <p class="font-medium">Full-Time</p>
                         </div>
                         <div class="flex items-center gap-[6px]">
                             <div class="flex shrink-0 w-6 h-6">
-                                <img src="assets/icons/moneys-cyan.svg')}}" alt="icon">
+                                <img src="{{asset('assets/icons/moneys-cyan.svg')}}" alt="icon">
                             </div>
                             <p class="font-medium">Guaranteed</p>
                         </div>
                         <div class="flex items-center gap-[6px]">
                             <div class="flex shrink-0 w-6 h-6">
-                                <img src="assets/icons/location-purple.svg')}}" alt="icon">
+                                <img src="{{asset('assets/icons/location-purple.svg')}}" alt="icon">
                             </div>
                             <p class="font-medium">Bali, Indonesia</p>
                         </div>
@@ -263,7 +263,7 @@
                             <p class="font-bold text-lg leading-[27px]">Rp 18.500.000</p>
                             <p class="text-sm leading-[21px]">/month</p>
                         </div>
-                        <a href="{{ front.details }}" class="rounded-full p-[14px_24px] bg-[#FF6B2C] font-semibold text-white hover:shadow-[0_10px_20px_0_#FF6B2C66] transition-all duration-300">Details</a>
+                        <a href="{{ route('front.details', $job->slug) }}" class="rounded-full p-[14px_24px] bg-[#FF6B2C] font-semibold text-white hover:shadow-[0_10px_20px_0_#FF6B2C66] transition-all duration-300">Details</a>
                     </div>
                 </div>
             </div>
