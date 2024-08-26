@@ -14,6 +14,7 @@ use Spatie\Permission\Contracts\Role;
 
 Route::get('/', [FrontController::class, 'index'])->name('front.index');
 Route::get('/details/{company_job:slug}', [FrontController::class, 'details'])->name('front.details');
+Route::get('/details/{category:slug}', [FrontController::class, 'category'])->name('front.category');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
