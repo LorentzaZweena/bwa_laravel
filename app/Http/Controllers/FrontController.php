@@ -19,4 +19,8 @@ class FrontController extends Controller
         $jobs = CompanyJob::with(['category', 'company'])->where('id', '!=', $companyJob->id)->InRandomOrder()->take(4)->get();
         return view('front.details', compact('companyJob', 'jobs'));
     }
+
+    public function apply(CompanyJob $companyJob){
+        return view('front.apply', compact('companyJob'));
+    }
 }
